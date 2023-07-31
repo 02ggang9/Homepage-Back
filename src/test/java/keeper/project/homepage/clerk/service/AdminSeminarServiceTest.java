@@ -398,26 +398,16 @@ public class AdminSeminarServiceTest extends AdminClerkServiceTestHelper {
     }
   }
 
-//  @Nested
-//  class FailTest {
-//
-//    @Test
-//    @DisplayName("[FAIL] 중복된 날짜(이름) 세미나 생성")
-//    void createDuplicateSeminarTest() {
-//      seminarRepository.save(SeminarEntity.builder()
-//          .openTime(LocalDateTime.now())
-//          .build());
-//      SeminarCreateRequestDto request = SeminarCreateRequestDto.builder()
-//          .openTime(LocalDateTime.now())
-//          .build();
-//      em.flush();
-//      em.clear();
-//
-//      Assertions.assertThrows(CustomDuplicateSeminarException.class,
-//          () -> adminSeminarService.createSeminar(request));
-//    }
-//
-//  }
+  @Nested
+  class FailTest {
+
+    @Test
+    @DisplayName("[FAIL] 중복된 날짜(이름) 세미나 생성")
+    void createDuplicateSeminarTest() {
+
+    }
+
+  }
 
 
   SeminarAttendanceStatusEntity getSeminarAttendanceStatus(SeminarAttendanceStatus status) {
